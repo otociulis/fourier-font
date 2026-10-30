@@ -6,6 +6,10 @@ A separate TypeScript command converts font outlines into sampled line segments 
 
 Includes three redistributable OFL-licensed comparison fonts: Dancing Script (default), Sacramento and Roboto Mono. See [font rights](#font-rights) for attribution and the renamed Fourier datasets.
 
+## Inspiration
+
+This project was heavily inspired by [How I released a game that has no assets](https://www.youtube.com/watch?v=Qr3VsZYQy4s).
+
 ## Run
 
 Requires Node **22.12 or newer**. With nvm:
