@@ -10,7 +10,7 @@ describe('glyph score', () => {
     it('sets exact letter lengths without changing pitch, bridges or sentence pauses', () => {
         for (const mode of ['speech', 'sing'] as const) {
             for (const voicing of ['tone', 'chords'] as const) {
-                for (const letterDurationMs of [40, 100, 420, 1000]) {
+                for (const letterDurationMs of [40, 100, 210, 420, 1000]) {
                     const options = { ...settings, mode, voicing, letterDurationMs, spaceGlideMs: 120 };
                     const score = makeScore(font, 'Ab C.D', options);
                     const letters = score.notes.filter((note) => !note.bridge);
@@ -290,7 +290,7 @@ describe('glyph score', () => {
 
     it('uses longer notes and changing pitches for singing, without changing text order', () => {
         const speech = makeScore(font, 'Hello', settings);
-        const sing = makeScore(font, 'Hello', { ...settings, mode: 'sing', letterDurationMs: 420 });
+        const sing = makeScore(font, 'Hello', { ...settings, mode: 'sing', letterDurationMs: 210 });
         expect(sing.notes.map((note) => note.character)).toEqual(speech.notes.map((note) => note.character));
         expect(new Set(sing.notes.map((note) => note.pitch)).size).toBeGreaterThan(1);
         expect(sing.duration).toBeGreaterThan(speech.duration);

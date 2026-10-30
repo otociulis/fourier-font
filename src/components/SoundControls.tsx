@@ -21,7 +21,7 @@ export default function SoundControls({ font, text, frequency, wiggleAmplitude, 
     const [exclamationLift, setExclamationLift] = useState(4);
     const [exclamationFall, setExclamationFall] = useState(2);
     const [wordPausePercent, setWordPausePercent] = useState(143);
-    const [letterDurations, setLetterDurations] = useState<Record<SoundMode, number>>({ speech: 140, sing: 420 });
+    const [letterDurations, setLetterDurations] = useState<Record<SoundMode, number>>({ speech: 140, sing: 210 });
     const letterDurationMs = letterDurations[mode];
     const [glidePercent, setGlidePercent] = useState(29);
     const [spaceGlides, setSpaceGlides] = useState<Record<SoundMode, number>>({ speech: 0, sing: 29 });

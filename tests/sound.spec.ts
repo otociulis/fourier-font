@@ -106,7 +106,7 @@ test('plays real glyph PCM in both modes, finishes, stops, and cancels on edits'
     await page.getByRole('textbox', { name: 'Performance mode' }).click();
     await page.getByRole('option', { name: 'Sing', exact: true }).click();
     await expect(basePitch).toHaveAttribute('aria-valuenow', '196');
-    await expect(letterDuration).toHaveAttribute('aria-valuenow', '420');
+    await expect(letterDuration).toHaveAttribute('aria-valuenow', '210');
     await expect(questionRise).toHaveCount(0);
     await page.getByRole('textbox', { name: 'Performance mode' }).click();
     await page.getByRole('option', { name: 'Speech', exact: true }).click();
